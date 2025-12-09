@@ -1,0 +1,10 @@
+{
+  "name": "physics-test",
+  "main": "physics.js",
+  "scripts": {
+    "test": "vitest"
+  },
+  "dependencies": {
+    "vitest": "^4.0.15"
+  }
+}
