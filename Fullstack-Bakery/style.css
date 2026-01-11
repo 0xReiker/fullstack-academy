@@ -1,6 +1,6 @@
 body {
   background-color: #662222;
-  font-family: sans-serif;
+  font-family: "Comfortaa", sans-serif;
 }
 
 header {
@@ -47,6 +47,11 @@ header nav a {
   border-radius: 1em;
 }
 
+header nav a:hover {
+  background-color: #eb8a9d;
+  cursor: pointer;
+}
+
 main {
   color: #6e0202;
   display: flex;
@@ -76,6 +81,11 @@ li {
   text-align: center;
 }
 
+li:hover {
+  background-color: #eb8a9d;
+  cursor: pointer;
+}
+
 article {
   flex: 1;
   background-color: #f5daa7;
@@ -98,4 +108,18 @@ footer {
   margin: 2em auto 0;
   padding: 1.5em;
   border-radius: 1em;
+}
+
+.socials {
+  display: flex;
+  flex-direction: row;
+  gap: 3em;
+  justify-self: center;
+  margin: 1em auto;
+  width: fit-content;
+}
+
+.socials img {
+  width: 5em;
+  height: auto;
 }
