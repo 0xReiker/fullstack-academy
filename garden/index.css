@@ -14,4 +14,5 @@ body {
   padding: 0.25rem;
   background-color: wheat;
   text-align: center;
+  display: grid;
 }

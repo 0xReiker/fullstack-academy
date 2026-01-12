@@ -1,0 +1,175 @@
+#level-1 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+#level-1 .carrots {
+  grid-column: 1 / 2;
+}
+
+#level-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+#level-2 .peas {
+  grid-column: 1 / 3;
+  grid-row: 1;
+}
+
+#level-2 .onions {
+  grid-column: 1;
+  grid-row: 2;
+}
+
+#level-2 .tomatoes {
+  grid-column: 2;
+  grid-row: 2;
+}
+
+#level-2 .lettuce {
+  grid-column: 1;
+  grid-row: 3;
+}
+
+#level-2 .carrots {
+  grid-column: 2;
+  grid-row: 3;
+}
+
+#level-3 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+#level-3 .peas {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+#level-3 .onions {
+  grid-column: 2 / 4;
+  grid-row: 1;
+}
+
+#level-3 .tomatoes {
+  grid-column: 1 / 3;
+  grid-row: 2;
+}
+
+#level-3 .lettuce {
+  grid-column: 3;
+  grid-row: 2;
+}
+
+#level-3 .carrots {
+  grid-column: 1 / 4;
+  grid-row: 3;
+}
+
+#level-4 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+#level-4 .peas {
+  grid-column: 1 / 3;
+  grid-row: 1;
+}
+
+#level-4 .onions {
+  grid-column: 3;
+  grid-row: 1 / 3;
+}
+
+#level-4 .carrots {
+  grid-column: 4;
+  grid-row: 1 / 3;
+}
+
+#level-4 .tomatoes {
+  grid-column: 1;
+  grid-row: 2;
+}
+
+#level-4 .lettuce {
+  grid-column: 2;
+  grid-row: 2;
+}
+
+#level-5 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+
+#level-5 .carrots {
+  grid-column: 1;
+  grid-row: 1 / 4;
+}
+
+#level-5 .onions {
+  grid-column: 3;
+  grid-row: 1 / 3;
+}
+
+#level-5 .lettuce {
+  grid-column: 5;
+  grid-row: 1;
+}
+
+#level-5 .peas {
+  grid-column: 4 / 6;
+  grid-row: 2;
+}
+
+#level-5 .tomatoes {
+  grid-column: 2 / 5;
+  grid-row: 3;
+}
+
+#level-6 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+
+#level-6 .carrots {
+  grid-column: 1 / 6;
+  grid-row: 1;
+}
+
+#level-6 .onions {
+  grid-column: 1;
+  grid-row: 2 / 4;
+}
+
+#level-6 .peas {
+  grid-column: 2 / 5;
+  grid-row: 2 / 4;
+}
+
+#level-6 .tomatoes {
+  grid-column: 5;
+  grid-row: 2 / 4;
+}
+
+#level-6 .lettuce {
+  grid-column: 1 / 6;
+  grid-row: 4;
+}
+
+#level-7 {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(5ch, 1fr));
+}
+
+#level-8 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 15ch);
+  grid-auto-rows: 5ch;
+}
+
+#level-9 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(5rem, 1fr));
+  grid-auto-rows: 5rem;
+}
