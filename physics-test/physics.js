@@ -8,7 +8,7 @@
  * @returns {number} NaN if either argument is not a number
  * @returns {undefined} undefined if mass is negative
  */
-export function getKineticEnergy(mass, speed) {
+function getKineticEnergy(mass, speed) {
   if (typeof mass !== "number" || typeof speed !== "number") {
     return NaN;
   }
@@ -17,5 +17,7 @@ export function getKineticEnergy(mass, speed) {
     return undefined;
   }
 
-  return (mass * speed) / 2;
+  return (mass * speed * speed) / 2;
 }
+
+export { getKineticEnergy };

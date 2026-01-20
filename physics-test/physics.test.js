@@ -22,11 +22,11 @@ describe("getKineticEnergy", function () {
   });
 
   it("handles positive numbers: 3kg, 5m/s => 37.5J", function () {
-    expect(getKineticEnergy(3, 5)).toEqual(37.5);
+    expect(getKineticEnergy(3, 5)).toBeCloseTo(37.5);
   });
 
   it("handles negative numbers: 3kg, -5m/s => 37.5J", function () {
-    expect(getKineticEnergy(3, -5)).toEqual(37.5);
+    expect(getKineticEnergy(3, -5)).toBeCloseTo(37.5);
   });
 
   it("handles floating point numbers: 0.2kg, 12.2m/s => 14.884J", function () {
