@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dog Images</title>
+  </head>
+  <body>
+    <h1>Random Dog Pictures</h1>
+
+    <button id="randomBtn">Get Random Dog</button>
+    <img
+      id="dogImage"
+      style="max-width: 500px; display: block; margin-top: 20px"
+    />
+
+    <script>
+      const randomBtn = document.getElementById("randomBtn");
+
+      randomBtn.addEventListener("click", async () => {
+        const response = await fetch("http://localhost:3000/api/dog/random");
+        const data = await response.json();
+
+        const dogImage = document.getElementById("dogImage");
+        dogImage.src = data.message;
+      });
+    </script>
+  </body>
+</html>
