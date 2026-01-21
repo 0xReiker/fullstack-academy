@@ -283,3 +283,67 @@ const duration = Date.now() - start; // Calculate difference
 
 [`Creates a Date object for right now, then converts it to a readable string for logging.`]:
 const timestamp = new Date().toISOString();
+
+**.env** - The purpose of a .env is to obscur things like;
+-Database Passwords
+-API Keys
+-JWT secret keys for authentication
+-Payment processor credentials
+
+These shouldn't be in our code because if we push code to github, anyone could see those things. People could steal API keys and or get what's needed to get inside the databases.
+
+**CORS** = Cross-Origin Resource Sharing - It is a browser security feature that blocks web pages from making requests to a different domain than the one serving the page. By default browsers can only use stuff from the same exact domain name, so we have to add some stuff in (CORS HEADERS) to allow that to happen.
+
+      ~It's not about our backend and frontend talking to each other, it's about the browser allowing our frotend JavaScript to make requests.~
+
+My understanding is that we'll get an HTTP server response that looks something like this;
+
+Access-Control-Allow-Origin: \*
+Access-Control-Allow-Methods: GET, POST, PUT, DELETE
+Access-Control-Allow-Headers: Content-Type
+
+^^ This tells the server "you're allowed to use this response"
+
+To implement this, I need to;
+
+1. Import the CORS package at the top of server.js (like I did with Express.js and dotenv)
+2. Use it as middleware before my routes (like I did with express.static and my logging middleware).
+
+**Clarification - CORS IS ONLY ABOUT BROWSER-BASED JAVASCRIPT MAKING REQUESTS** _It's not "server-to-server" communication. Servers can talk to each other freely without CORS_
+
+**Mental Model: The Security Guard Analogy**
+**Scenario 1**: Server-to-Server (No CORS needed)
+
+- Your Express server calls Dog CEO API with fetch()
+- This is like two buildings calling each other directly on the phone
+- No security guard, no browser involved
+- Always works, no restrictions
+
+**Scenario 2**: Browser JavaScript (CORS required)
+
+- Your HTML/JavaScript in the browser calls your Express API
+- The browser is a security guard sitting between the user and servers
+- Browser says: "Wait, this webpage from localhost:3000 is trying to call api.example.com. Are they allowed to talk?"
+- Browser checks the response headers from api.example.com
+- If CORS headers say "yes," request goes through
+- If no CORS headers, browser blocks it
+
+**Consistent Response Format** - Adding a consistent response format for HTTP responses makes it easier for frontend devs to be able to use.
+
+**Centralized error handlings** - Rather than using try/catch blocks over and over, we can use centralized error handling to handle all of our errors. It's cleaner and easier to maintain. The solution is;
+
+**"Error handling middleware"** - Express has a special type of middleware that catches errors for ANY route. It's called an error handler and it has 4 parameters instead of 3;
+
+err, req, res, next
+
+as opposed to our old req, res, next.
+
+_How it works_
+
+1. In my routes, instead of try/catch blocks, you throw errors or use next(error)
+
+2. Express automatically catches the errors and passes them to my error handler
+
+3. Error handler handles the response instead
+
+**_asyncHandler at top, error handler at bottom_**

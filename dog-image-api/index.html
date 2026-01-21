@@ -19,10 +19,14 @@
 
       randomBtn.addEventListener("click", async () => {
         const response = await fetch("http://localhost:3000/api/dog/random");
-        const data = await response.json();
-
+        const json = await response.json();
         const dogImage = document.getElementById("dogImage");
-        dogImage.src = data.message;
+
+        if (json.success) {
+          dogImage.src = json.data.message;
+        } else {
+          alert(json.error);
+        }
       });
     </script>
   </body>

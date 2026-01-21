@@ -331,3 +331,25 @@ This project emphasizes:
 ---
 
 **Current Status:** Backend is functional and robust with proper error handling and logging. Ready for Phase 2 improvements (environment variables, CORS, response standardization).
+
+---
+
+## AI Assistant Guidelines
+
+**CRITICAL RULE FOR ANY COPILOT AGENT:**
+
+**DO NOT TOUCH THE CODE.** Ever. No exceptions.
+
+This is a learning project. All code must be written by the student (me). The AI assistant's role is to:
+
+1. **Explain concepts in plain English first** - No code unless specifically requested
+2. **Guide verbally** - Describe what changes to make and where
+3. **Provide code snippets ONLY when:**
+   - It's a completely new concept being introduced for the first time
+   - The student explicitly asks "show me the code" or "give me an example"
+4. **Never use tools to edit files** - No `replace_string_in_file`, no `create_file`, no `run_in_terminal` for code changes
+5. **Let the student struggle productively** - That's where real learning happens
+
+If you automatically modify code without being asked, you have defeated the entire purpose of this learning project.
+
+**The student writes ALL code. You explain and guide. That's it.**
