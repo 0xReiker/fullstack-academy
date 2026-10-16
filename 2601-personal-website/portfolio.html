@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Portfolio - Jason Dick</title>
+  </head>
+  <body>
+    <main>
+      <section class="portfolio-header">
+        <h1>My Portfolio</h1>
+        <p>Browse My Recent Projects</p>
+        <nav class="nav-buttons">
+          <a href="index.html">Back to Home</a>
+        </nav>
+      </section>
+
+      <section class="projects">
+        <article class="project-card">
+          <div class="project-content">
+            <h2>CS2 Float Trade-Up Calculator</h2>
+            <p class="project-type">React Web Application</p>
+            <p class="project-description">
+              A React-based trade-up calculator for Counter-Strike 2 that
+              calculates precise float values of possible knife outcomes. Users
+              select 5 red-tier skins, input their float values, and the app
+              calculates which knives are possible based on the case collection
+              system.
+            </p>
+            <div class="project-features">
+              <h3>Key Features:</h3>
+              <ul>
+                <li>
+                  Manually-verified float ranges for 556+ knife skins across 20
+                  knife types
+                </li>
+                <li>
+                  Accurate normalized float calculations using proper formulas
+                </li>
+                <li>
+                  Handles float range mismatches (e.g., 0.00-1.00 input →
+                  0.01-0.08 output)
+                </li>
+                <li>
+                  Comprehensive data structure with 49 cases and multiple gun
+                  categories
+                </li>
+                <li>
+                  Modular component architecture with organized data files
+                </li>
+              </ul>
+            </div>
+            <div class="project-status">
+              <strong>Status:</strong> In Development - Phase 1: Data Setup
+            </div>
+            <div class="project-links">
+              <a
+                href="https://github.com/JLeDick/cs2-float-calculator"
+                class="project-link"
+                >View on GitHub</a
+              >
+            </div>
+          </div>
+        </article>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2026 Jason Dick. All rights reserved.</p>
+    </footer>
+  </body>
+</html>
