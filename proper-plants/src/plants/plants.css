@@ -1,0 +1,55 @@
+.plants {
+  padding: 20px;
+}
+
+.plants h3 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.plants ol {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.PlantItem {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.PlantItem span:first-child {
+  font-size: 80px;
+  margin-bottom: 10px;
+}
+
+.PlantItem span:nth-child(2) {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.PlantItem button {
+  width: 100%;
+  padding: 10px;
+  background-color: white;
+  border: 1px solid #333;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.2s;
+}
+
+.PlantItem button:hover {
+  background-color: #f0f0f0;
+}
