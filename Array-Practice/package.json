@@ -1,0 +1,16 @@
+{
+  "name": "array-practice-problems",
+  "version": "1.0.0",
+  "description": "Practice problems for array methods",
+  "scripts": {
+    "test": "node --test",
+    "test:filter": "node --test arrayFilter.test.js"
+  },
+  "keywords": [
+    "arrays",
+    "practice",
+    "javascript"
+  ],
+  "author": "",
+  "license": "ISC"
+}
